@@ -61,7 +61,9 @@ cd ShExJSG
 generate_parser ShExJ.jsg
 ```
 
-Then run all of the unit tests
+Then run all tests:
+
+`uv run pytest`
 
 ## Note for developers
 The original way this library was developed created a circular dependency for the test environment, causing uv to fail
