@@ -71,4 +71,4 @@ to resolve. The reason is that `ShExJSG` is a runtime dependency for `pyshexc`, 
 `ShExJSG`. The only way around this is to run the development install the following way after cloning:
 
 1. `uv sync`
-2. `uv pip install "pyshexc>=0.10.3" --no-deps`
+2. `uv pip install "pyshexc>=0.10.3"`
