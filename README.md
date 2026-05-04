@@ -1,3 +1,7 @@
+This repository was originally developed by [Harold Solbrig](https://github.com/hsolbrig) and was kindly contributed
+to the LinkML organization because of his retirement. All credit for the original development of this repository goes
+to him.
+
 # ShExJSG - 
 Python representation of the ShEx AST(ish) specification. 
 
@@ -61,4 +65,14 @@ cd ShExJSG
 generate_parser ShExJ.jsg
 ```
 
-Then run all of the unit tests
+Then run all tests:
+
+`uv run pytest`
+
+## Note for developers
+The original way this library was developed created a circular dependency for the test environment, causing uv to fail
+to resolve. The reason is that `ShExJSG` is a runtime dependency for `pyshexc`, while `pyshexc` is a dev dependency for 
+`ShExJSG`. The only way around this is to run the development install the following way after cloning:
+
+1. `uv sync`
+2. `uv pip install "pyshexc>=0.10.3"`
